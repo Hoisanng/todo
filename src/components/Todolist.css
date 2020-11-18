@@ -1,0 +1,18 @@
+.todolistmain {
+    border: 1px black solid;
+    height: 300px;
+    width: 350px;
+}
+
+.inputbox {
+    margin-top: 30px;
+    margin-left: 83px;
+    width: 170px;
+    height: 20px;
+}
+
+.button {
+    font-family: helvetica;
+    margin-left: 91px;
+}
+    
