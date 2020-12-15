@@ -15,4 +15,7 @@
     font-family: helvetica;
     margin-left: 91px;
 }
-    
+
+.hidden {
+    display:none;
+}

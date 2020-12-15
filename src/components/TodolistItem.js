@@ -7,27 +7,35 @@ import './TodolistItem.css';
 
 const TodolistItem = ({ todoItem, setTodos, todos, todo }) => {
 
+
     const deleteHandler = () => {
         setTodos(todos.filter((el) => el.id !== todo.id));
     }
     const completeHandler = () => {
-       
-    
         setTodos(
             todos.map((item) => {
-                if (item.id === todo.id) {
-                    return {
-                        ...item,
-                        completed: !item.completed
-                    };
+                // console.log("dit is de item ")
+                // console.log(item)
+                // console.log("dit is de todo ")
+                // console.log(todo)
+                
+                if (item.id === todo.id) {    
+                    item.completed = true;
+                           
+                    // return {
+                    //     ...item,
+                    //     completed: !item.completed
+                    // };
+                    
                 }
                 return item;
             })
         );
     }
+  
     return (
         <div className="todocontainer">
-            <li>{todoItem}</li>
+            <li className= {todo.completed ? "streep" : "" } > {todoItem}</li>
             <div className="buttonwrapper">
                 <button onClick={completeHandler}>
                     <FontAwesomeIcon icon={faCheck} />
@@ -37,6 +45,7 @@ const TodolistItem = ({ todoItem, setTodos, todos, todo }) => {
                 </button>
             </div>
         </div>
+        
     )
 }
 export default TodolistItem
