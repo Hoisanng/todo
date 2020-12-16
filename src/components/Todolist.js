@@ -4,7 +4,7 @@ import TodolistItem from './TodolistItem';
 import { v4 as uuidv4 } from 'uuid';
 
 
-const ToDoList=({isShowing, inputValue, setInputValue, setTodos, todos }) => {
+const ToDoList=({ toDoDate, isShowing, inputValue, setInputValue, setTodos, todos }) => {
 
     // console.log(todos)
 

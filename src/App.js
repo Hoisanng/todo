@@ -4,8 +4,8 @@ import 'react-calendar/dist/Calendar.css';
 import './App.css';
 import Dagen from './Dagen.json';
 import ToDoList from './components/Todolist';
-import { v4 as uuidv4 } from 'uuid';
 
+export default MyApp;
 
 function MyApp() {
   // State
@@ -23,17 +23,20 @@ function MyApp() {
     // console.log(setToDoDate);
     // console.log(date)
   };
+
+
   const clickHandler = (date) => {
     if (formatDate(date) === toDoDate) {
       setIsShowing(!isShowing);
     }
+  };
     
     // console.log(formatDate(date))
     // console.log(toDoDate)
-  };
+  
 
   const formatDate = (date) => { return `${date.getMonth() + 1}-${date.getDate()}-${date.getFullYear()}`; };
-  
+  console.log(ToDoList);
   return (
     <div>
       <Calendar
@@ -44,11 +47,11 @@ function MyApp() {
         tileClassName={({ date }) => { for (let i = 0; i < Dagen.length; i++) if (Dagen[i].date === formatDate(date)) { return "color"; } }}
         
          />
-
-        < ToDoList isShowing={isShowing} inputValue={inputValue} setInputValue={setInputValue} todos={todos} setTodos={setTodos} />
+        
+        < ToDoList toDoDate={toDoDate} isShowing={isShowing} inputValue={inputValue} setInputValue={setInputValue} todos={todos} setTodos={setTodos} />
       
     </div>
+   
   );
 }
 
-export default MyApp;
