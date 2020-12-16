@@ -23,6 +23,12 @@ function MyApp() {
     // console.log(setToDoDate);
     // console.log(date)
   };
+  
+//   const DateConnect = (props) => {
+//   return (
+//     <div>{props.name}</div>
+//   )
+// }
 
 
   const clickHandler = (date) => {
@@ -36,7 +42,7 @@ function MyApp() {
   
 
   const formatDate = (date) => { return `${date.getMonth() + 1}-${date.getDate()}-${date.getFullYear()}`; };
-  console.log(ToDoList);
+  // console.log(ToDoList);
   return (
     <div>
       <Calendar
@@ -47,6 +53,7 @@ function MyApp() {
         tileClassName={({ date }) => { for (let i = 0; i < Dagen.length; i++) if (Dagen[i].date === formatDate(date)) { return "color"; } }}
         
          />
+        
         
         < ToDoList toDoDate={toDoDate} isShowing={isShowing} inputValue={inputValue} setInputValue={setInputValue} todos={todos} setTodos={setTodos} />
       
