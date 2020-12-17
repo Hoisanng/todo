@@ -7,10 +7,11 @@ import './TodolistItem.css';
 
 const TodolistItem = ({ todoItem, setTodos, todos, todo }) => {
 
-
+   
     const deleteHandler = () => {
-        setTodos(todos.filter((el) => el.id !== todo.id));
+        setTodos(todos.filter((el) => el.id !== todo.id));     
     }
+    
     const completeHandler = () => {
         setTodos(
             todos.map((item) => {

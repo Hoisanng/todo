@@ -34,6 +34,7 @@ function MyApp() {
   const clickHandler = (date) => {
     if (formatDate(date) === toDoDate) {
       setIsShowing(!isShowing);
+      setTodos(todos.filter(() => toDoDate === date));  
     }
   };
     

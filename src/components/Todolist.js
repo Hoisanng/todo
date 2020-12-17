@@ -19,7 +19,6 @@ const inputHandler = (event) => {
 
 const addTodo = () => {
     setTodos([...todos,{ text : inputValue , completed : false, id: uuidv4(), date: toDoDate }])
-    console.log(todos);
     setInputValue('');
     // console.log(todos)
 };
